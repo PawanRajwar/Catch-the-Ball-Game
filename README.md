@@ -51,4 +51,18 @@ Color: Red
 
 - The score and level are displayed at the top-left and top-right corners of the canvas, respectively.
 
+### 5. Game Over Screen:
+- When the ball reaches the bottom of the canvas without being caught, the game ends.
+
+- A "Game Over!" message appears in the center of the canvas, along with a restart button.
+
+### 6. Restart Button:
+- The restart button allows the player to replay the game without restarting the program.
+
+- When clicked, it resets the score, level, ball speed, and positions of game elements.
+
+- The button is styled to match the game's blue-themed design.
+
+
+
 
