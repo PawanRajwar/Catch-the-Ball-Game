@@ -42,3 +42,20 @@ level_text = canvas.create_text(350, 20, text=f"Level: {level}", font=("Arial", 
 
 # Global variable to track the restart button
 restart_button = None
+
+# Move paddle function
+def move_paddle(event):
+    x = event.x
+    if x < paddle_width // 2:
+        x = paddle_width // 2
+    elif x > canvas_width - paddle_width // 2:
+        x = canvas_width - paddle_width // 2
+    canvas.coords(paddle, x - paddle_width // 2, paddle_y, x + paddle_width // 2, paddle_y + paddle_height)
+
+canvas.bind("<Motion>", move_paddle)
+
+# Restart the game
+def restart_game():
+    global ball_x, ball_y, ball_speed, score, level, restart_button
+
+    # Reset game state
