@@ -111,3 +111,7 @@ def update_ball():
 
     canvas.coords(ball, ball_x - ball_radius, ball_y - ball_radius, ball_x + ball_radius, ball_y + ball_radius)
     root.after(50, update_ball)
+    
+# Start the game
+update_ball()
+root.mainloop()
