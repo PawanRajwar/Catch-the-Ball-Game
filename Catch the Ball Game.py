@@ -58,4 +58,38 @@ canvas.bind("<Motion>", move_paddle)
 def restart_game():
     global ball_x, ball_y, ball_speed, score, level, restart_button
 
-    # Reset game state
+     # Reset game state
+    ball_x = random.randint(10, canvas_width - 10)
+    ball_y = 0
+    ball_speed = 5
+    score = 0
+    level = 1
+
+    # Update UI elements
+    canvas.itemconfig(score_text, text=f"Score: {score}")
+    canvas.itemconfig(level_text, text=f"Level: {level}")
+    canvas.delete("game_over")
+
+    # Remove restart button
+    if restart_button:
+        restart_button.destroy()
+        restart_button = None
+
+    # Restart ball movement
+    update_ball()
+    
+    
+# Update ball position and check for collisions
+def update_ball():
+    global ball_x, ball_y, score, level, ball_speed, restart_button
+
+    ball_y += ball_speed
+
+    if ball_y + ball_radius > canvas_height:  # Ball missed
+        canvas.create_text(canvas_width // 2, canvas_height // 2, text="Game Over!", font=("Arial", 24), fill="red", tags="game_over")
+
+        # Create restart button
+        restart_button = tk.Button(root, text="Restart", command=restart_game, bg="darkblue", fg="white", font=("Arial", 12, "bold"))
+        restart_button.place(x=canvas_width // 2 - 50, y=canvas_height // 2 + 40)
+
+        return
