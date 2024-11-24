@@ -63,6 +63,45 @@ Color: Red
 
 - The button is styled to match the game's blue-themed design.
 
+## Functionalities Explained
+
+### 1. Paddle Movement
+- The paddle follows the horizontal movement of the mouse.
+
+- The bind method tracks the <Motion> event, allowing the paddle's position to update dynamically.
+
+- Boundary conditions ensure that the paddle does not move outside the canvas.
+
+### 2. Ball Movement
+- The ball moves downward continuously, using the after() method to update its position at regular intervals.
+
+- After a successful catch :
+   - The ball resets to a random x-coordinate at the top of the canvas.
+
+   - The score increments by 1.
+
+   - Every 5 points, the level increases, and the ball's speed accelerates.
+
+
+### 3. Collision Detection
+- The game detects whether the ball's position overlaps with the paddle's position.
+
+- A collision results in a successful catch, updating the score and resetting the ball.
+
+- If the ball reaches the bottom without being caught, the game ends.
+
+### 4. Game Over Screen and Restart
+- When the game ends:
+  - A "Game Over!" message is displayed in the center of the canvas.
+
+  - A restart button appears below the message.
+
+- Clicking the restart button:
+  - Resets the score, level, ball speed, and positions.
+
+  - Removes the "Game Over!" message and the restart button.
+
+  - Starts a new game.
 
 
 
