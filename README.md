@@ -105,3 +105,21 @@ Color: Red
 
 
 
+## Prerequisites
+
+- Python: Ensure Python (version 3.6 or later) is installed on your system.
+
+- Tkinter: Tkinter is included with Python by default. No additional installation is required.
+
+## Steps to Run
+- Clone the repository or copy the source code into a Python file named catch the ball Game.py
+
+- Open your terminal or command prompt.
+
+- Navigate to the directory containing the file.
+
+- Run the script:
+  python Catch the Ball Game.py
+  
+
+
