@@ -31,4 +31,14 @@ ball_y = 0
 # Score and level
 score = 0
 level = 1
- 
+
+# Draw paddle and ball
+paddle = canvas.create_rectangle(paddle_x, paddle_y, paddle_x + paddle_width, paddle_y + paddle_height, fill=paddle_color)
+ball = canvas.create_oval(ball_x - ball_radius, ball_y - ball_radius, ball_x + ball_radius, ball_y + ball_radius, fill=ball_color)
+
+# Display score and level
+score_text = canvas.create_text(50, 20, text=f"Score: {score}", font=("Arial", 16), fill="black")
+level_text = canvas.create_text(350, 20, text=f"Level: {level}", font=("Arial", 16), fill="black")
+
+# Global variable to track the restart button
+restart_button = None
