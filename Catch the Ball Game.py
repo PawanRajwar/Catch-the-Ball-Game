@@ -93,3 +93,21 @@ def update_ball():
         restart_button.place(x=canvas_width // 2 - 50, y=canvas_height // 2 + 40)
 
         return
+    
+    # Check collision with the paddle
+    if paddle_y <= ball_y + ball_radius <= paddle_y + paddle_height:
+        paddle_coords = canvas.coords(paddle)
+        if paddle_coords[0] <= ball_x <= paddle_coords[2]:
+            ball_y = 0
+            ball_x = random.randint(10, canvas_width - 10)
+            score += 1
+            canvas.itemconfig(score_text, text=f"Score: {score}")
+
+            # Increase level and speed every 5 points
+            if score % 5 == 0:
+                level += 1
+                ball_speed += 2
+                canvas.itemconfig(level_text, text=f"Level: {level}")
+
+    canvas.coords(ball, ball_x - ball_radius, ball_y - ball_radius, ball_x + ball_radius, ball_y + ball_radius)
+    root.after(50, update_ball)
