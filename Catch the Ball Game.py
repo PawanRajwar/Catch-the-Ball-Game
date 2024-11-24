@@ -20,3 +20,15 @@ paddle_height = 20
 paddle_color = "darkblue"
 paddle_x = (canvas_width - paddle_width) // 2
 paddle_y = canvas_height - 30
+
+# Ball properties
+ball_radius = 10
+ball_color = "red"
+ball_speed = 5
+ball_x = random.randint(10, canvas_width - 10)
+ball_y = 0
+
+# Score and level
+score = 0
+level = 1
+ 

@@ -13,3 +13,5 @@ Catch the Ball is an engaging and fun game created using Python and the Tkinter 
 - Restart Option: A themed restart button allows players to restart the game seamlessly.
 
 - Dynamic Score Display: Tracks and displays the player's score and current level on the screen.
+
+
