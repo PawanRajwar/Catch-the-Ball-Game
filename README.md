@@ -140,6 +140,3 @@ python Catch_the_Ball_Game.py
 ### 🔄 **Restart Functionality**:
 ![Restart Functionality](<Screenshot 2024-11-25 122305-1.png>)
 
----
-
-This README uses a structured format with icons to enhance clarity and engagement. Update placeholders like repository links as needed!
