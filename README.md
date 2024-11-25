@@ -122,4 +122,10 @@ Color: Red
   python Catch the Ball Game.py
   
 
+## Screenshots 
+
+![Game Screenshot](<Screenshot 2024-11-25 122251-1.png>)
+
+![Restart Functionality](<Screenshot 2024-11-25 122305-1.png>)
+
 
